@@ -22,6 +22,8 @@ function calcularCuadrado(lado) {
 //agrupar los console en grupos para imprimirlos
 console.groupEnd('Cuadrado')
 
+
+/* ***************TTRIANGULO****************************** */
 console.group('Triangulo')
 
 const ladoTriangulo1 = 5;
@@ -52,5 +54,39 @@ function calcularTriangulo(lado1, lado2, base, altura) {
     }
 }
 console.groupEnd('Triangulo')
+
+
+//********** CIRCULO****************
+console.group('Ciculo');
+
+const radioCirculo = 3;
+const diametroCirculo = radioCirculo *2;
+const PI = 3.1416;
+
+const circunferencia = diametroCirculo * PI; //q
+const areaCirculo = (radioCirculo ** 2 ) * PI;
+
+console.log({
+    radioCirculo,
+    diametroCirculo,
+    PI,
+    circunferencia,
+    areaCirculo
+    
+})
+
+function calcularCirculo(radio){
+    const diametro = radio * 2;
+    const radioAlcuadrado = Math.pow(radio, 2) //primero el numero y luego el numero que se va a elevar
+
+    return {
+        circunferencia: diametro * Math.PI,
+        area: radioAlcuadrado * Math.PI
+    }
+
+}
+
+
+console.groupEnd('Circulo');
 
 
